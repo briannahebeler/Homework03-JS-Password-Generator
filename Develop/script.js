@@ -22,8 +22,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-// how do i start the loop for everything to go inside of 
+// start of the loop
 var wantPass = confirm("Would you like to generate a password?")
 if (wantPass === true) {
 
@@ -31,11 +30,10 @@ if (wantPass === true) {
   var passChar = prompt("How many characters would you like your password to contain?")
 
   for (passChar === false; passChar < 8 || passChar > 128; passChar++) {
-    // if (passChar < 8 || passChar > 128) {
       alert("Password needs to be between 8 - 128 characters.")
-      var passChar = prompt("How many characters would you like your password to contain?")
-    // }
+      var passChar = prompt("How many characters would you like your password to contain?");
   }
+
 
   var passSymbolChar = confirm("Click okay to confirm including specialized characters.")
   var passNumChar = confirm("Click okay to confirm including number characters.")
