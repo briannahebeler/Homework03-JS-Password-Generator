@@ -4,11 +4,8 @@ var numChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var allChar = [symbolChar, numChar, lowerChar, upperChar];
-var selectChar = [selectAllChar, selectChar1, selectChar2, selectChar3, selectChar4, selectChar5, selectChar6, selectChar7, selectChar8, selectChar9, selectChar10, selectChar11, selectChar12, selectChar13, selectChar14];
 
-var passLength = passChar;
-
-var finalPass = []
+// var finalPass = []
 
 
 // Assignment Code (included)
@@ -58,6 +55,10 @@ if (wantPass === true) {
 generateBtn.addEventListener("click", writePassword);
 
 
+// var selectChar = [selectAllChar, selectChar1, selectChar2, selectChar3, selectChar4, selectChar5, selectChar6, selectChar7, selectChar8, selectChar9, selectChar10, selectChar11, selectChar12, selectChar13, selectChar14];
+
+// var passLength = passChar;
+
 // if (passSymbolChar === true && passNumChar === true && passUpperChar === true && passLowerChar === true) {
 //   var selectAllChar = allChar;
 // }
@@ -102,12 +103,10 @@ generateBtn.addEventListener("click", writePassword);
 // }
 // else if (passSymbolChar === false && passNumChar === false && passUpperChar === true && passLowerChar === true) {
 //   var selectChar14 = upperChar + lowerChar;
-// }
+// };
 
 // console.log(selectChar);
 
 //   for (var i = 0; i < passLength; i++) {
 //   var pass = Math.floor(Math.random() + passLength)
-
 // }  
-// if 
