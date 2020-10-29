@@ -95,6 +95,13 @@ else if (passSymbolChar === false && passNumChar === false && passUpperChar && p
   var selectChar = upperChar + lowerChar;
 };
 
+// var randomPass = [];
+
+// for (var i = 0; i < passLength; i++) {
+//   i = Math.floor(Math.random() * selectChar.length);
+//   randomPass.push(charSet[i]);
+//   console.log(randomPass);
+// }
 for (var i = 0; i < passLength; i++) {
   var randomi = Math.floor(Math.random() * selectChar.length);
     console.log(selectChar[randomi]);
