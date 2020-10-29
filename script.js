@@ -44,22 +44,22 @@ for (charTypes === false; !passSymbolChar && !passNumChar && !passUpperChar && !
 }
 
 if (passSymbolChar && passNumChar && passUpperChar && passLowerChar) {
-  var selectChar = symbolChar + numChar + upperChar + lowerChar;
+  var selectChar = symbolChar.concat(numChar).concat(upperChar).concat(lowerChar);
 }
 else if (passSymbolChar && passNumChar && passUpperChar && passLowerChar === false) {
-  var selectChar = symbolChar + numChar + upperChar;
+  var selectChar = symbolChar.concat(numChar).concat(upperChar);
 }
 else if (passSymbolChar && passNumChar && passUpperChar === false && passLowerChar === false) {
-  var selectChar = symbolChar + numChar;
+  var selectChar = symbolChar.concat(numChar);
 }
 else if (passSymbolChar && passNumChar === false && passUpperChar === false && passLowerChar === false) {
   var selectChar = symbolChar;
 }
 else if (passSymbolChar && passNumChar && passUpperChar === false && passLowerChar) {
-  var selectChar = symbolChar + numChar + lowerChar;
+  var selectChar = symbolChar.concat(numChar).concat(lowerChar);
 }
 else if (passSymbolChar && passNumChar === false && passUpperChar === false && passLowerChar) {
-  var selectChar = symbolChar + lowerChar;
+  var selectChar = symbolChar.concat(lowerChar);
 }
 else if (passSymbolChar === false && passNumChar === false && passUpperChar === false && passLowerChar) {
   var selectChar = lowerChar;
@@ -71,34 +71,35 @@ else if (passSymbolChar === false && passNumChar === false && passUpperChar && p
   var selectChar = upperChar;
 }
 else if (passSymbolChar === true && passNumChar === false && passUpperChar && passLowerChar === false) {
-  var selectChar = symbolChar + upperChar;
+  var selectChar = symbolChar.concat(upperChar);
 }
 else if (passSymbolChar && passNumChar === false && passUpperChar && passLowerChar) {
-  var selectChar = symbolChar + upperChar + lowerChar;
+  var selectChar = symbolChar.concat(upperChar).concat(lowerChar);
 }
 else if (passSymbolChar === false && passNumChar && passUpperChar && passLowerChar) {
-  var selectChar = numChar + upperChar + lowerChar;
+  var selectChar = numChar.concat(upperChar).concat(lowerChar);
 }
 else if (passSymbolChar === false && passNumChar && passUpperChar && passLowerChar === false) {
-  var selectChar = numChar + upperChar;
+  var selectChar = numChar.concat(upperChar);
 }
 else if (passSymbolChar === false && passNumChar && passUpperChar === false && passLowerChar) {
-  var selectChar = numChar + lowerChar;
+  var selectChar = numChar.concat(lowerChar);
 }
 else if (passSymbolChar === false && passNumChar === false && passUpperChar && passLowerChar) {
-  var selectChar = upperChar + lowerChar;
+  var selectChar = upperChar.concat(lowerChar);
 };
 
+console.log({ selectChar });
 var randomPass = [];
 
 for (var i = 0; i < passLength; i++) {
-  k = Math.floor(Math.random() * selectChar.length);
+  k = Math.floor(Math.random() * selectChar.length - 1);
   randomPass.push(selectChar[k]);
 } 
 
 // console.log(randomPass);
 
-var rP = randomPass.toString();
+var rP = randomPass.join();
 console.log(rP)
 
 
