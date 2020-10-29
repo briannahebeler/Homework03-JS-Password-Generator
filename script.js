@@ -3,18 +3,13 @@ var symbolChar = ["!", "@", "#", "$", "%", "^", "&", "+", "-", "?", "<", ">", "~
 var numChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-// var allChar = [symbolChar, numChar, lowerChar, upperChar];
-
-// var finalPass = []
-
-// var charSet;
-
 
 // Assignment Code (included)
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input (included)
 function writePassword() {
+
   // start of the loop of series of prompts for password criteria
 var wantPass = confirm("Would you like to generate a password?")
 if (wantPass === true) {
@@ -49,7 +44,6 @@ for (charTypes === false; !passSymbolChar && !passNumChar && !passUpperChar && !
 }
 
 if (passSymbolChar && passNumChar && passUpperChar && passLowerChar) {
-
   var selectChar = symbolChar + numChar + upperChar + lowerChar;
 }
 else if (passSymbolChar && passNumChar && passUpperChar && passLowerChar === false) {
@@ -95,17 +89,23 @@ else if (passSymbolChar === false && passNumChar === false && passUpperChar && p
   var selectChar = upperChar + lowerChar;
 };
 
-// var randomPass = [];
+var randomPass = [];
+
+for (var i = 0; i < passLength; i++) {
+  k = Math.floor(Math.random() * selectChar.length);
+  randomPass.push(selectChar[k]);
+} 
+
+// console.log(randomPass);
+
+var rP = randomPass.toString();
+console.log(rP)
+
 
 // for (var i = 0; i < passLength; i++) {
-//   i = Math.floor(Math.random() * selectChar.length);
-//   randomPass.push(charSet[i]);
-//   console.log(randomPass);
+//   var randomi = Math.floor(Math.random() * selectChar.length);
+//     console.log(selectChar[randomi]);
 // }
-for (var i = 0; i < passLength; i++) {
-  var randomi = Math.floor(Math.random() * selectChar.length);
-    console.log(selectChar[randomi]);
-}
 
   // var password = generatePassword();
 
