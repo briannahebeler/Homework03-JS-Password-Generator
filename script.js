@@ -1,11 +1,7 @@
 //Character Variables
-// var symbolChar = ["!", "@", "#", "$", "%", "^", "&", "+", "-", "?", "<", ">", "~", "'", "(", ")", ",", ".", "/", ":", ";", "[", "]", "{", "}", "_", "`", "|",];
 var symbolChar = "!@#$%^&*()_-+={}[]:;'<>?,./~`".split("");
-// var numChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var numChar = "1234567890".split("");
-// var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var lowerChar = "abcdefghijklmnopqrstuvwxyz".split("");
-// var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 // Assignment Code (included)
@@ -93,22 +89,20 @@ function writePassword() {
     var selectChar = upperChar.concat(lowerChar);
   };
 
-  console.log({ selectChar });
+// this creates the array for the randomized passwords characters to go in
   var randomPass = [];
-
+// this loop creates the random password based off the length and character types the user chooses 
   for (var i = 0; i < passLength; i++) {
     k = Math.floor(Math.random() * selectChar.length - 1);
     randomPass.push(selectChar[k]);
   } 
-
-  var rP = randomPass.join();
+// this joins together the individual characters from the array into a password
+  var rP = randomPass.join('');
   console.log(rP)
-
-  var randomPass = [];
-
 
   var passwordText = document.querySelector("#password");
 
+  // this diplays the password
   passwordText.value = rP;
 
 }
