@@ -98,6 +98,7 @@ function writePassword() {
 
   for (var i = 0; i < passLength; i++) {
     var randomi = Math.floor(Math.random() * selectChar1.length);
+    console.log(Str.concat(randomi))
     console.log(selectChar1[randomi]);
   }
 
