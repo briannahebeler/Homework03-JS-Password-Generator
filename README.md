@@ -1,4 +1,4 @@
-# Homework03-JS-Password-Generator
+# Password-Generator
 
 ## Description: ##
 
@@ -15,4 +15,4 @@
 
 ## Link to deployed application: ##
 
-https://briannahebeler.github.io/Homework03-JS-Password-Generator/
+https://briannahebeler.github.io/Password-Generator/
